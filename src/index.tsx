@@ -3,13 +3,44 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Error from './error';
+import Redux from './redux';
+import Mobx from './mobx';
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import TypescriptPage from './typescriptPage';
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: '/redux',
+        element: <Redux />
+      },
+      {
+        path: '/mobx',
+        element: <Mobx />
+      },
+      {
+        path: '/typescript',
+        element: <TypescriptPage />
+      }
+    ]
+  }
+
+])
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const queryClient = new QueryClient();
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router}></RouterProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
