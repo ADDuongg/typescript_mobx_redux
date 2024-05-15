@@ -90,19 +90,6 @@ function TypescriptPage() {
             });
         },
     });
-    /* const mutationUpdate = useMutation({
-        mutationFn: async (id: number) => {
-            const response = await putAPI(`/${id}`, JSON.stringify(newProduct));
-            return response as APIData;
-        },
-        onSuccess(dataResponse) {
-            setDataProduct(prev => {
-                const updatedProducts = [...prev, dataResponse];
-                localStorage.setItem('dataProduct', JSON.stringify(updatedProducts));
-                return updatedProducts;
-            });
-        },
-    }); */
 
     function handleShow() {
         setShow(!show);

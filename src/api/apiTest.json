@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "username": "john_doe",
+    "email": "john@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": 30,
+    "isAdmin": "1"
+  },
+  {
+    "id": 2,
+    "username": "jane_smith",
+    "email": "jane@example.com",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "age": 25,
+    "isAdmin": "0"
+  },
+  {
+    "id": 3,
+    "username": "alex_brown",
+    "email": "alex@example.com",
+    "firstName": "Alex",
+    "lastName": "Brown",
+    "age": 35,
+    "isAdmin": "1"
+  },
+  {
+    "id": 4,
+    "username": "emily_jones",
+    "email": "emily@example.com",
+    "firstName": "Emily",
+    "lastName": "Jones",
+    "age": 28,
+    "isAdmin": "1"
+  },
+  {
+    "id": 5,
+    "username": "sophia_nguyen",
+    "email": "sophia@example.com",
+    "firstName": "Sophia",
+    "lastName": "Nguyen",
+    "age": 32,
+    "isAdmin": "0"
+  },
+  {
+    "id": 6,
+    "username": "olivia_taylor",
+    "email": "olivia@example.com",
+    "firstName": "Olivia",
+    "lastName": "Taylor",
+    "age": 29,
+    "isAdmin": "1"
+  },
+  {
+    "id": 7,
+    "username": "ava_garcia",
+    "email": "ava@example.com",
+    "firstName": "Ava",
+    "lastName": "Garcia",
+    "age": 27,
+    "isAdmin": "0"
+  },
+  {
+    "id": 8,
+    "username": "isabella_martinez",
+    "email": "isabella@example.com",
+    "firstName": "Isabella",
+    "lastName": "Martinez",
+    "age": 31,
+    "isAdmin": "0"
+  },
+  {
+    "id": 9,
+    "username": "mia_rodriguez",
+    "email": "mia@example.com",
+    "firstName": "Mia",
+    "lastName": "Rodriguez",
+    "age": 26,
+    "isAdmin": "0"
+  },
+  {
+    "id": 10,
+    "username": "amelia_hernandez",
+    "email": "amelia@example.com",
+    "firstName": "Amelia",
+    "lastName": "Hernandez",
+    "age": 33,
+    "isAdmin": "0"
+  }
+]
