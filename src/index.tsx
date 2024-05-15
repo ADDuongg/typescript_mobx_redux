@@ -9,7 +9,7 @@ import Redux from './redux';
 import Mobx from './mobx';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import TypescriptPage from './typescriptPage';
+import TypescriptPage from './reactQuery';
 const router = createBrowserRouter([
   {
     path: '/',
