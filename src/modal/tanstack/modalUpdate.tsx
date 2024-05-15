@@ -93,8 +93,8 @@ const ModalUpdate: React.FC<ModalUpdateProps> = ({ handleShowEdit, idUpdate,setD
                                     <button onClick={handleShowEdit} className='rounded-2xl h-10 w-24 border-gray-400 border text-white hover:text-gray-400 hover:bg-white bg-gray-400'>
                                         Cancel
                                     </button>
-                                    <button onClick={() => handleUpdate()} className='rounded-2xl h-10 w-24 border-green-400 border text-white hover:text-green-400 hover:bg-white bg-green-400'>
-                                        Update
+                                    <button disabled = {mutationUpdate.isPending} onClick={() => handleUpdate()} className='rounded-2xl h-10 w-24 border-green-400 border text-white hover:text-green-400 hover:bg-white bg-green-400'>
+                                        {mutationUpdate.isPending ? 'Updating' : 'Update'}
                                     </button>
                                 </div>
                             </div>

@@ -1,11 +1,15 @@
 import React from 'react';
 import tw from 'twin.macro';
 import styled from 'styled-components';
+import { APIData } from '../../crud';
+import { UseMutationResult } from '@tanstack/react-query';
 interface ModalAddProps {
     handleAdd: () => void;
     handleShow: () => void;
     handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    mutationAdd: UseMutationResult<APIData, Error, Partial<APIData>, unknown>; 
 }
+
 const Modal = styled.div`
     ${tw`fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-gray-700 bg-opacity-75 z-40`}
 `;
@@ -13,7 +17,7 @@ const Modal = styled.div`
 const ModalContent = styled.div`
     ${tw`bg-white  rounded-lg w-2/6 h-auto`}
 `;
-const ModalAdd: React.FC<ModalAddProps> = ({ handleAdd, handleShow, handleChange }) => {
+const ModalAdd: React.FC<ModalAddProps> = ({ handleAdd, handleShow, handleChange, mutationAdd }) => {
     return (
         <div>
             <Modal>
@@ -50,8 +54,8 @@ const ModalAdd: React.FC<ModalAddProps> = ({ handleAdd, handleShow, handleChange
                                     <button onClick={handleShow} className='rounded-2xl h-10 w-24 border-gray-400 border text-white hover:text-gray-400 hover:bg-white bg-gray-400'>
                                         Cancel
                                     </button>
-                                    <button onClick={handleAdd} className='rounded-2xl h-10 w-24 border-green-400 border text-white hover:text-green-400 hover:bg-white bg-green-400'>
-                                        Add
+                                    <button disabled = {mutationAdd.isPending} onClick={handleAdd} className='rounded-2xl h-10 w-24 border-green-400 border text-white hover:text-green-400 hover:bg-white bg-green-400'>
+                                        {mutationAdd.isPending ? 'Adding': 'Add'}
                                     </button>
                                 </div>
                             </div>

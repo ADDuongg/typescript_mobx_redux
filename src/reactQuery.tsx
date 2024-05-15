@@ -117,7 +117,7 @@ function TypescriptPage() {
                     </div>
                 </div>
             )}
-            <div className='w-full flex justify-end sticky z-30 top-32 left-0 right-0'>
+            <div  className='w-full flex justify-end sticky z-30 top-32 left-0 right-0'>
                 <CustomButton bg={"green"} onClick={handleShow}>Add new <i className="fa-solid fa-plus"></i></CustomButton>
             </div>
             <div className='w-10/12 mx-auto h-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 auto-rows-auto'>
@@ -147,7 +147,7 @@ function TypescriptPage() {
                 ))}
             </div>
 
-            {show && <ModalAdd handleAdd={handleAdd} handleShow={handleShow} handleChange={handleChange} />}
+            {show && <ModalAdd mutationAdd = {mutationAdd} handleAdd={handleAdd} handleShow={handleShow} handleChange={handleChange} />}
             {showEdit && <ModalUpdate setDataProduct = {setDataProduct} idUpdate={idUpdate} /* handleUpdate={handleUpdate} */ handleShowEdit={handleShowEdit} /* handleChange={handleChange} */ />}
 
         </>
